@@ -1,0 +1,53 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model AwConcept {
+  id               Int       @id @default(autoincrement())
+  requested_by     Int?
+  requested_date   DateTime? @db.Date
+  required_date    DateTime? @db.Date
+  artwork_type     String?   @db.VarChar(15)
+  jobtype          String?   @db.VarChar(15)
+  previous_design  String?   @db.VarChar(15)
+  design_category  String?   @db.VarChar(15)
+  print_category   String?   @db.VarChar(15)
+  pattern_number   String?   @db.VarChar(15)
+  pattern_name     String?   @db.VarChar(15)
+  client_name      String?   @db.Text
+  template_type    String?   @db.VarChar(15)
+  name             String?   @db.VarChar(3)
+  numbers          String?   @db.VarChar(3)
+  design_descript  String?   @db.Text
+  design_descripti String?   @db.Text
+
+  @@map("jk_ops_aw_concept")
+}
+
+
+
+
+
+model FileUpload {
+  id           Int       @id @default(autoincrement())
+  filename     String    @db.VarChar(255)   // saved name on disk
+  originalName String    @db.VarChar(255)   // client file name
+  mimeType     String    @db.VarChar(100)
+  size         BigInt
+  url          String    @db.VarChar(255)   // e.g., /uploads/1731412345678-report.pdf
+  storage      Storage   @default(LOCAL)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  @@map("file_upload")
+}
+
+enum Storage {
+  LOCAL
+}
+

@@ -1,0 +1,145 @@
+{
+  "info": {
+    "name": "JK OPS - AW Concepts API",
+    "description": "API collection for AW Concepts management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create AW Concept",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"requested_by\": 101,\n  \"requested_date\": \"2025-11-12\",\n  \"required_date\": \"2025-12-01\",\n  \"artwork_type\": \"Digital\",\n  \"jobtype\": \"New Design\",\n  \"previous_design\": \"N/A\",\n  \"design_category\": \"Branding\",\n  \"print_category\": \"Offset\",\n  \"pattern_number\": \"PTN-001\",\n  \"pattern_name\": \"Floral\",\n  \"client_name\": \"ABC Corporation\",\n  \"template_type\": \"Standard\",\n  \"design_descript\": \"Logo design for new product line\",\n  \"name\": \"ABC\",\n  \"numbers\": \"005\",\n  \"design_descripti\": \"Modern minimalist design with blue theme\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/aw-concepts",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["aw-concepts"]
+        }
+      }
+    },
+    {
+      "name": "Get All AW Concepts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3008/aw-concepts",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["aw-concepts"]
+        }
+      }
+    },
+    {
+      "name": "Search AW Concepts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3008/aw-concepts?search=ABC",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["aw-concepts"],
+          "query": [
+            {
+              "key": "search",
+              "value": "ABC"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get AW Concept by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3008/aw-concepts/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["aw-concepts", "1"]
+        }
+      }
+    },
+    {
+      "name": "Get by Artwork Type",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3008/aw-concepts/artwork-type/Digital",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["aw-concepts", "artwork-type", "Digital"]
+        }
+      }
+    },
+    {
+      "name": "Get by Client Name",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3008/aw-concepts/client/ABC",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["aw-concepts", "client", "ABC"]
+        }
+      }
+    },
+    {
+      "name": "Update AW Concept",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"jobtype\": \"Completed\",\n  \"design_descripti\": \"Final design completed with client approval\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3008/aw-concepts/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["aw-concepts", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete AW Concept",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3008/aw-concepts/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3008",
+          "path": ["aw-concepts", "1"]
+        }
+      }
+    }
+  ]
+}

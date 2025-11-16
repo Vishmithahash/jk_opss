@@ -1,0 +1,130 @@
+# Node modules
+/node_modules/
+
+# Build / compiled output
+/dist/
+/build/
+/out/
+/public/build/
+/.next/
+/.nuxt/
+/.expo/
+.vite/
+.bundle/
+.ionic/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime / temp
+pids
+*.pid
+*.seed
+*.pid.lock
+.temp
+.tmp
+.cache/
+.cache-loader/
+.parcel-cache/
+
+# Coverage / test output
+/coverage/
+/.nyc_output/
+jest-cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs and editors
+/.idea/
+/.project
+.classpath
+.c9/
+/*.launch
+.settings/
+/*.sublime-workspace
+
+# VS Code - allow specific workspace files but ignore others
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# dotenv environment variable files (do NOT commit these)
+.env
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Secrets / local configs
+secrets.json
+local.settings.json
+credentials.json
+
+# Package managers & lock files
+# (Track package-lock.json / yarn.lock / pnpm-lock.yaml — DO NOT ignore)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Binary / build artifacts
+*.exe
+*.dll
+*.so
+*.dylib
+*.pyc
+*.pyo
+*.class
+
+# Large or generated assets
+/*.tgz
+*.zip
+*.7z
+
+# Git/SSH
+*.pem
+*.key
+
+# Docker
+docker-compose.override.yml
+.docker/
+
+# CI / deployment
+/.vercel/
+/.netlify/
+/now/
+/firebase/
+dist-*/release/
+
+# Mobile / frameworks caches
+android/.gradle/
+android/.idea/
+ios/Pods/
+*.xcworkspace
+.gradle/
+*.iml
+
+# Prisma generated folder (if you generate client)
+generated/
+prisma/generated/
+node_modules/.prisma
+
+# Misc caches and lockfiles
+.pnp.*
+.cache/
+
+# If you use TypeScript
+*.tsbuildinfo
+
+# End of .gitignore
